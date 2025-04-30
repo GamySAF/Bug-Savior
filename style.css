@@ -1,0 +1,454 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Flex container for nav items */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 2px rgb(107, 107, 107) solid;
+  padding: 10px;
+}
+
+/* Logo section */
+.nav-logo h1 {
+  font-size: 1.8rem;
+  color: #222;
+}
+
+/* Search bar */
+.nav-search .search-bar {
+  padding: 8px 12px;
+  border: 1px solid #cabbbb;
+  border-radius: 8px;
+  outline: none;
+  width: 200px;
+  transition: border 0.2s ease;
+}
+
+.nav-search .search-bar:focus {
+  border-color: #007bff;
+}
+#noResults {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.2rem;
+  color: #938787;
+  padding: 1.5rem;
+  margin-top: 2rem;
+
+}
+
+
+/* Dark mode toggle */
+.nav-toggle #darkmode {
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 5px 15px;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 6px;
+
+}
+
+.nav-toggle #darkmode:hover {
+  background-color: #eee;
+}
+  button {
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px;
+  }
+  button:hover {
+    background-color: #0052cc;
+  }
+  #sub_container{
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+  }
+  
+  #welcome {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  #welcome h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  #welcome h3 {
+    font-weight: normal;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  #welcome h4 {
+    font-style: italic;
+    color: #777;
+  }
+  #logBugBtn {
+    padding: 10px 16px;
+    font-size: 14px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #logBugBtn:hover {
+    background-color: #0056b3;
+  }
+
+  #ResolvedBugs {
+    margin: 20px;
+  }
+  
+  /* Resolved bugs section */
+  #ResolvedBugs h1 {
+    margin-bottom: 20px;
+  }
+
+  /* Bug card */
+.bug-card {
+    background-color: white;
+    padding: 20px;
+    border-left: 4px solid #28a745;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  .bug-card .title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .bug-card .description {
+    margin-bottom: 10px;
+    color: #de3d3d;
+  }
+  
+  .bug-card .tags {
+    color: #007bff;
+    font-size: 13px;
+  }
+
+  /* Form Section - Initially Hidden */
+.hidden {
+    display: none;
+}
+
+#bugForm {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#bugForm h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#bugForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+#bugForm label {
+    margin-top: 10px;
+}
+
+#bugForm input,
+#bugForm textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#bugForm button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#bugForm button[type="button"] {
+    background-color: #ccc;
+}
+
+#bugForm button:hover {
+    background-color: #555;
+}
+    /* footer */
+  footer {
+    border-top: 1px solid #ccc;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+  }
+
+  #darkmode{
+    font-size: 30px;
+  }
+  /* Responsive styles */
+@media (max-width: 668px) {
+    #navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    #sub_container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .search-bar {
+      width: 80%;
+    }
+  
+    #logBugBtn {
+      width: 100%;
+    }
+  
+    .bug-card {
+      padding: 15px;
+    }
+  
+    #welcome h1 {
+      font-size: 26px;
+    }
+  
+    #welcome h3, #welcome h4 {
+      font-size: 16px;
+    }
+  
+    footer {
+      font-size: 13px;
+      padding: 15px;
+    }
+  }
+
+  /* 🌙 DARK MODE STYLES */
+body.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark #navbar {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .nav-logo h1 {
+  color: #f0f0f0;
+}
+
+body.dark .nav-search .search-bar {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  border: 1px solid #444;
+}
+
+body.dark .nav-search .search-bar:focus {
+  border-color: #66b2ff;
+}
+
+body.dark .nav-toggle #darkmode {
+  color: #f0f0f0;
+}
+
+body.dark button,
+body.dark #logBugBtn,
+body.dark #bugForm button {
+  background-color: #3c26a5;
+  color: #f0f0f0;
+}
+
+body.dark #bugForm {
+  background-color: #242121;
+}
+
+body.dark .bug-card {
+  background-color: #1e1e1e;
+  border-left-color: #28a745;
+  color: #f0f0f0;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.03);
+}
+
+body.dark .bug-card .description {
+  color: #ff6b6b;
+}
+
+body.dark .bug-card .tags {
+  color: #66b2ff;
+}
+
+body.dark footer {
+  color: #aaa;
+  border-color: #333;
+}
+body.dark input,body.dark textarea{
+  background-color: #1e1e1e;
+  color: white;
+}
+body.dark button:hover {
+  background-color: #46688d !important;
+}
+
+/* Resolved Bugs Section */
+#ResolvedBugs {
+  margin: 20px;
+}
+
+#ResolvedBugs h1 {
+  margin-bottom: 20px;
+}
+
+/* Drop Zone */
+.drop-zone {
+  width: 100%;
+  height: 200px;
+  border: 2px dashed #28a745;
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.drop-zone:hover {
+  background-color: #e0f7e0;
+}
+
+/* Bug Cards */
+.bug-cards {
+  display: flex;
+  gap: 20px;
+}
+
+.bug-card {
+  background-color: white;
+  padding: 20px;
+  border-left: 4px solid #28a745;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  cursor: pointer;
+}
+
+.bug-card .title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.bug-card .description {
+  margin-bottom: 10px;
+  color: #de3d3d;
+}
+
+.bug-card .tags {
+  color: #007bff;
+  font-size: 13px;
+}
+
+.bug-card.dragging {
+  opacity: 0.5;
+}
+
+
+@media (max-width: 668px) {
+  #container,#navbar,.nav-container{
+    width: 100%;
+    gap: 2px;
+  }
+  .nav-search{
+     padding:0;
+     margin: 0;
+  }
+.nav-toggle{
+  padding:0;
+  margin: 0  !important;
+  width: 20%;
+}
+
+}
+
+
+
+
+
+/* Sticky container */
+#container {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: inherit; /* Keep the existing color */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* subtle depth */
+  backdrop-filter: blur(4px); /* glassy background if supported */
+}
+
+/* Sticky sub_container */
+#sub_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: sticky;
+  top: 10px; /* adjust based on navbar height */
+  z-index: 999;
+  background: inherit;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(3px);
+  padding-bottom: 10px;
+}
+.sticky-text {
+  position: sticky;
+  top:  200px;
+  z-index: 1000;
+  background: inherit;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(3px);
+  /* padding-bottom: 10px; */
+  width: 100%;
+  padding: 0 0 0 15px;
+  margin-top: 0;
+}
+
+
+
+
+

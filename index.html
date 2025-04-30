@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug-Savior</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="darkmode">
+
+    <div id="container">
+        <!-- Navbar Section -->
+        <nav id="navbar">
+          <div class="nav-container">
+            <div class="nav-logo">
+              <h1>Bug Savior</h1>
+            </div>
+            <div class="nav-search">
+              <input type="text" id="searchInput" placeholder="Search bugs..." class="search-bar" />
+            </div>
+            <div class="nav-toggle">
+              <span id="darkmode">🌙</span>
+            </div>
+          </div>
+        </nav>
+      
+        <!-- Welcome / Log Bug -->
+        <div id="sub_container">
+          <div class="welcome-text">
+            <h2>Welcome to Bug-Savior</h2>
+            <p>Your all-in-one bug tracking dashboard</p>
+          </div>
+          <button id="logBugBtn" aria-label="Log a new bug">+ Log New Bug</button>
+        </div>
+      </div>
+      
+
+    <!-- Log Bug Form (initially hidden) -->
+    <div id="bugForm" class="hidden">
+        <h2>Log a New Bug</h2>
+        <form id="form">
+            <label for="title">Bug Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="description">Bug Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="fix">How You Fixed It:</label>
+            <textarea id="fix" name="fix" required></textarea>
+
+            <label for="tags">Tags:</label>
+            <input type="text" id="tags" name="tags">
+
+            <button type="submit">Save Bug</button>
+            <button type="button" id="cancelBtn">Cancel</button>
+        </form>
+    </div>
+<!-- 
+    Welcome Section -->
+    <!-- <div id="welcome">
+        <h1>Track Every Bug You Crush</h1>
+        <h4>“Every bug you fix is a step closer to mastery“</h4>
+    </div> -->
+
+    <!-- Resolved Bugs Section -->
+
+    <div class="sticky-text">
+        <h1>Resolved Bugs</h1>
+    </div>
+    <div id="ResolvedBugs">
+        <!-- No Results Section -->
+        <div id="noResults" class="hidden">
+            <p>No bugs found matching your search.</p>
+        </div>
+
+        <!-- Bug Card Example -->
+        <div class="bug-card">
+            <div class="title">Login page: Console throws 'undefined' error</div>
+            <div class="description">
+                When clicking the login button without credentials, the console logs an “undefined” error due to missing input validation.
+            </div>
+            <div class="description"><strong>Fix:</strong> Added input checks and default error handling before authenticating.</div>
+            <div class="tags">#frontend #javascript #validation #sample</div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer style="text-align: center; margin-top: 40px; padding: 20px; font-size: 14px; color: #555;">
+        <p>© 2025 Bug-Savior. </p>
+        <p>“Every bug fixed is a step toward mastery.”</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
